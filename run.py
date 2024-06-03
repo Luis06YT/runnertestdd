@@ -14,7 +14,7 @@ username_git = os.environ.get("USERGIT")
 token_git = os.environ.get("TOKENGIT")
 repo_link = os.environ.get("REPOLINK")
 
-print(USERGIT)
+print(username_git)
 
 Pin = 123456 #@param {type: "integer"}
 Autostart = False #@param {type: "boolean"}
