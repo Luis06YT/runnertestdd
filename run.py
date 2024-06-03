@@ -2,7 +2,7 @@ import os
 import subprocess
 import shutil
 
-CRD_SSH_Code = os.environ.get("SSHCODE")
+CRD_SSH_Code = os.getenv("SSHCODE")
 username = "user" #@param {type:"string"}
 password = "root" #@param {type:"string"}
 os.system(f"useradd -m {username}")
@@ -10,9 +10,9 @@ os.system(f"adduser {username} sudo")
 os.system(f"echo '{username}:{password}' | sudo chpasswd")
 os.system("sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd")
 
-username_git = os.environ.get("USERGIT")
-token_git = os.environ.get("TOKENGIT")
-repo_link = os.environ.get("REPOLINK")
+username_git = os.getenv("USERGIT")
+token_git = os.getenv("TOKENGIT")
+repo_link = os.getenv("REPOLINK")
 
 print(username_git)
 
