@@ -78,7 +78,6 @@ class CRDSetup:
         subprocess.run(["apt-get", "install", "git"])
 
         home_directory = os.path.expanduser('~/Desktop')
-        os.chdir(home_directory)
 
         subprocess.run(["git", "clone", f"https://{username_git}:{token_git}@{repo_link}", "tgbot"])
 
