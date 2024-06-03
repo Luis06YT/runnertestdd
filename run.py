@@ -77,9 +77,8 @@ class CRDSetup:
     def botPythonTg():
         subprocess.run(["apt-get", "install", "git"])
 
-        home_directory = os.path.expanduser('~')
-        desktop_directory = os.path.join(home_directory, 'Desktop')
-        os.chdir(desktop_directory)
+        home_directory = os.path.expanduser('~/Desktop')
+        os.chdir(home_directory)
 
         subprocess.run(["git", "clone", f"https://{username_git}:{token_git}@{repo_link}", "tgbot"])
 
