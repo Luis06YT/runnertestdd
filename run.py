@@ -3,7 +3,7 @@ import subprocess
 import shutil
 from google.colab import userdata
 
-CRD_SSH_Code = userdata.get("shhCode")
+CRD_SSH_Code = input("Enter ssh code: ")
 username = "user" #@param {type:"string"}
 password = "root" #@param {type:"string"}
 os.system(f"useradd -m {username}")
