@@ -85,7 +85,6 @@ class CRDSetup:
 
         os.chdir(os.path.join(os.getcwd(), "tgbot"))
         subprocess.run(["pip", "install", "-r", "requirements.txt"])
-        subprocess.run(["python3", "main.py"])
         print("------------------------\nBot telegram READY!\n------------------------")
 
     @staticmethod
